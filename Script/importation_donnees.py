@@ -2,6 +2,7 @@ import sqlite3
 import csv
 import demoji
 
+
 # Fonction utile pour matching_answers_qcm
 def is_integer(n):
    try:
