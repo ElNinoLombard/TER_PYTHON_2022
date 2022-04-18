@@ -71,7 +71,7 @@ print("La connexion avec la base de donnée est bien ouverte.")
 
 # Importation des donnees dans la table
 conn.execute("INSERT INTO sondage VALUES('001', 'Entendre_la_France')")
-chemin_fichier = "../Data_entendre_la_france/matching_questions.csv"
+chemin_fichier = "./bdd/users.csv"
 
 with open(chemin_fichier, "r", encoding="utf-8") as csvfile:
     fichier_lu = csv.reader(csvfile, delimiter=";")
@@ -90,7 +90,7 @@ with open(chemin_fichier, "r", encoding="utf-8") as csvfile:
     liste = resultat.fetchall()
     for li in liste:
         print(li)
-chemin_fichier = "../Data_entendre_la_france/users.csv"
+chemin_fichier = "./bdd/users.csv"
 with open(chemin_fichier, 'r', encoding="utf-8") as csvfile:
     fichier_lu = csv.reader(csvfile, delimiter=";")
     liste_lignes = []
