@@ -32,7 +32,7 @@ titre = "Entendre la France"
 conn.execute('INSERT INTO sondage VALUES("{}", "{}")'.format(id, titre))
 
 # Table matching_questions
-chemin_fichier = "./Data_entendre_la_france/matching_questions.csv"
+chemin_fichier = "../Data_entendre_la_france/matching_questions.csv"
 
 with open(chemin_fichier, "r", encoding="utf-8") as csvfile:
    fichier_lu = csv.reader(csvfile, delimiter=";")
@@ -61,7 +61,7 @@ for li in liste:
    conn.execute('INSERT INTO questions_posees VALUES("{}", "{}", "{}")'.format(1, li[0], compteur))
 
 # Table users
-chemin_fichier = "./Data_entendre_la_france/users.csv"
+chemin_fichier = "../Data_entendre_la_france/users.csv"
 
 with open(chemin_fichier, 'r', encoding="utf-8") as csvfile:
    fichier_lu = csv.reader(csvfile, delimiter=";")
@@ -86,7 +86,7 @@ with open(chemin_fichier, 'r', encoding="utf-8") as csvfile:
        conn.execute('INSERT INTO users VALUES("{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}")'.format(id, code_postal, commune, type_commune, nom_departement, departement, genre, tranche_age, formation, profession, taille_org, position_gj))
 
 # Table matching_answers_qcm
-chemin_fichier = "./Data_entendre_la_france/matching_answers_qcm.csv"
+chemin_fichier = "../Data_entendre_la_france/matching_answers_qcm.csv"
 
 with open(chemin_fichier, 'r', encoding="utf-8") as csvfile:
    fichier_lu = csv.reader(csvfile, delimiter=";")
