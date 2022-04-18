@@ -115,42 +115,5 @@ with open(chemin_fichier, 'r', encoding="utf-8") as csvfile:
        conn.execute('INSERT INTO matching_answers_qcm VALUES("{}", "{}", "{}")'.format(id, MQid, title))
 
 
-# --- Les tests
+# Construction UI et stockage des reponses par question
 
-# -- Test création table
-
-# Pour sondage :
-# resultat = conn.execute("SELECT * FROM sondage")
-# liste = resultat.fetchall()
-# for li in liste:
-#     print(li)
-
-# Pour matching_questions :
-# resultat = conn.execute("SELECT * FROM matching_questions")
-# liste = resultat.fetchall()
-# for li in liste:
-#     print(li)
-
-# Pour questions_posees :
-# resultat = conn.execute("SELECT qp.ordre, mq.title FROM questions_posees qp JOIN matching_questions mq ON mq.id = qp.MQid")
-# liste = resultat.fetchall()
-# for li in liste:
-#     print(li)
-
-# Pour users :
-# resultat = conn.execute("SELECT * FROM users")
-# liste = resultat.fetchall()
-# for li in liste:
-#     print(li)
-
-# Pour answers_qcm :
-# resultat = conn.execute("SELECT * FROM answers_qcm")
-# liste = resultat.fetchall()
-# for li in liste:
-#     print(li)
-
-# Pour matching_answers_qcm :
-# resultat = conn.execute("SELECT * FROM matching_answers_qcm")
-# liste = resultat.fetchall()
-# for li in liste:
-#     print(li)
